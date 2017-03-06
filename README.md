@@ -1,5 +1,5 @@
 ## Install modules
-mysql
+mysql  
 rbenv
 
 ## Setup development environment
