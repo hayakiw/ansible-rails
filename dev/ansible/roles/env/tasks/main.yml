@@ -11,11 +11,11 @@
     - rails
     - bundler
 
-#- name: Install javascript tools
-#  npm: name={{ item }} state=latest global=yes
-#  with_items:
-#    - bower
-#    - grunt-cli
+- name: Install javascript tools
+  npm: name={{ item }} state=latest global=yes
+  with_items:
+    - bower
+    - grunt-cli
 
 - name: Add repository for ansible
   apt_repository: repo='ppa:ansible/ansible' state=present
