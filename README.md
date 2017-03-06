@@ -2,7 +2,23 @@
 mysql
 rbenv
 
-## Development
+## Setup development environment
+
+### Prerequisites
+
+Install vagrant:  
+https://www.vagrantup.com/downloads.html
+
+Install VirtualBox:  
+https://www.virtualbox.org/wiki/Downloads
+
+Execute:
+
+```
+$ vagrant plugin install vagrant-vbguest
+```
+
+### Setup
 
 ```
 $ git clone git@github.com:hayakiw/ansible-rails.git
@@ -11,8 +27,6 @@ $ cd ansible-rails/dev
 $ vagrant up
 
 ```
-
-## Setup
 
 ```
 $ vagrant ssh
