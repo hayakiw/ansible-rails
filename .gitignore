@@ -21,3 +21,4 @@
 dev/.vagrant/
 dev/ansible/develop.retry
 
+public/assets/
