@@ -9,20 +9,40 @@
   </head>
 
   <body>
-    <header>
-        <nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <% if user_signed_in? %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Home', home_index_path %></li>
+          </ul>
+          <% end %>
+          <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-            <strong><%= link_to current_user.email, home_index_path %></strong>
-            <%= link_to 'プロフィール変更', edit_user_registration_path %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        <% else %>
-            <%= link_to 'サインアップ', new_user_registration_path %>
-            <%= link_to 'ログイン', new_user_session_path %>
+              <li><%= link_to current_user.email, edit_user_registration_path %></li>
+              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+              <li><%= link_to 'ログイン', new_user_session_path %></li>
             <% end %>
-        </nav>
-    </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>
