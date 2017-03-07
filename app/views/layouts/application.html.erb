@@ -39,9 +39,8 @@
       </div>
     </nav>
 
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <div class="container container-top">
+      <%= render 'layouts/flash' %>
       <%= yield %>
     </div>
   </body>

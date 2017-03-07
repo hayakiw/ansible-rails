@@ -1,0 +1,3 @@
+<% if flash; flash.each do |key,val| %>
+  <div style="text-align:center;" class='alert alert-<% case key; when 'notice' %>success<% when 'alert' %>danger<% end %>'><%= val %></div>
+<% end; end %>
