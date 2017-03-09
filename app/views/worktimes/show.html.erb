@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @worktime.user %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @worktime.project %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @worktime.start_at %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @worktime.end_at %>
+</p>
+
+<p>
+  <strong>Breaktimes:</strong>
+  <%= @worktime.breaktimes %>
+</p>
+
+<%= link_to 'Edit', edit_worktime_path(@worktime) %> |
+<%= link_to 'Back', worktimes_path %>
